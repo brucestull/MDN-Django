@@ -44,6 +44,26 @@
     release: python manage.py migrate users && python manage.py migrate
     ```
 
+1. Add `SECRET_KEY` to Heroku Config Variables:
+`heroku config:set SECRET_KEY=<value>` # Didn't work. Needed to use Heroku website for some reason.
+
+1. `git push heroku main`
+
+1. `heroku run python manage.py createsuperuser`
+
+1. Edit code:
+    * https://thinkster.io/tutorials/configuring-django-settings-for-production
+
+1. `heroku config:set DJANGO_SETTINGS_MODULE='locallibrary.settings.production'`
+
+1. Verify DEBUG=False in prod:
+    1. `heroku login`
+    1. `heroku run python manage.py shell`
+    1. `from django.conf import settings as s`
+    1. `print(s.DEBUG)`
+
+
+
 ### Django Tutorial Part 2: Creating a skeleton website
 
 1. 
