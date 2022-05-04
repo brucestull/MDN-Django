@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.admindocs',
 
     'users.apps.UsersConfig',
+    'catalog.apps.CatalogConfig',
 ]
 
 MIDDLEWARE = [
