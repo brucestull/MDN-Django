@@ -11,6 +11,8 @@
 * Routes:
     * http://localhost:8060/
     * http://localhost:8060/admin/
+    * http://localhost:8060/catalog/
+    * http://localhost:8060/katalog/
 * Production routes:
     * https://bunbuns-books.herokuapp.com/
     * https://git.heroku.com/bunbuns-books.git
@@ -62,11 +64,12 @@
     1. `from django.conf import settings as s`
     1. `print(s.DEBUG)`
 
-
-
 ### Django Tutorial Part 2: Creating a skeleton website
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
 
-1. 
+* New concepts:
+    * [RedirectView](https://docs.djangoproject.com/en/4.0/ref/class-based-views/base/#redirectview)
 
+### Django Tutorial Part 3: Using models
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Models
 
-### Second Phase
