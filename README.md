@@ -3,6 +3,7 @@
 ### Resources:
 * [Django Web Framework (Python)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 * https://github.com/brucestull/MDN-Django
+* https://github.com/brucestull/MDN-Django/projects/2
 
 ### Commands and virtual environment:
 * Virtual environment: C:\Users\Bruce\.virtualenvs\MDN-Django-I7w_2BnS\Scripts\activate.ps1
