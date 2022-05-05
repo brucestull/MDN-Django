@@ -78,5 +78,14 @@
     * [ManyToManyField](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/)
 
 ### Django Tutorial Part 4: Django admin site
-* [MDN Part 4](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
+* [MDN Part 4](https://github.com/brucestull/MDN-Django/issues/16)
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site
+
+* New concepts:
+    * [ModelAdmin](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#modeladmin-objects)
+        * [list_display](https://stackoverflow.com/a/59587324/10958667)
+        * [list_filter](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site#add_list_filters)
+        * [TabularInline](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#django.contrib.admin.TabularInline)
+    * [@admin.register(Model)](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#the-register-decorator)
+
 
