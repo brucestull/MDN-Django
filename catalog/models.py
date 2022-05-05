@@ -136,6 +136,9 @@ class BookInstance(models.Model):
         String representation for BookInstance Model object.
         """
         return f'{ self.book.title} ({ self.id })'
+    
+    def get_author(self):
+        return self.book.author
 
 
 class Author(models.Model):

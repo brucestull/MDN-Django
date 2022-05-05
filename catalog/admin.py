@@ -39,7 +39,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 @admin.register(models.BookInstance)
 class BookInstanceAdmin(admin.ModelAdmin):
-    list_display = ('book', 'language', 'imprint', 'status', 'due_back')
+    list_display = ('book', 'get_author', 'language', 'imprint', 'status', 'due_back')
     fieldsets = (
         (None, {
             'fields': ('language', 'imprint', 'id')
