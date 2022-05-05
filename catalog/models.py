@@ -62,6 +62,9 @@ class Book(models.Model):
     def display_genre(self):
         return ', '.join(genre.name for genre in self.genre.all()[:4])
     
+    def genre_list(self):
+        return tuple(genre.name for genre in self.genre.all()[:4])
+    
     display_genre.short_description = 'Genre'
 
 
