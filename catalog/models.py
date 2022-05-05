@@ -19,6 +19,26 @@ class Genre(models.Model):
         return self.name
 
 
+class Language(models.Model):
+    """
+    Model for content Language (Arabic, English, French, Spanish, etc.).
+    """
+    name = models.CharField(
+        max_length=200,
+        help_text="""
+            Enter the content's natural language (Arabic, English, 
+            French, Spanish, etc.).
+        """
+        )
+    
+    
+    def __str__(self):
+        """
+        String representation of Language Model object.
+        """
+        return self.name
+
+
 class Book(models.Model):
     """
     Model for book.
@@ -78,7 +98,7 @@ class BookInstance(models.Model):
         help_text="Unique ID for this particular book instance."
     )
     book = models.ForeignKey(
-        'Book',
+        Book,
         on_delete=models.RESTRICT,
         null=True
     )
@@ -102,6 +122,11 @@ class BookInstance(models.Model):
         default='m',
         help_text='Book availability.'
     )
+    language = models.ForeignKey(
+        Language,
+        on_delete=models.PROTECT,
+        null=True
+    )
 
     class Meta:
         ordering = ['due_back']
@@ -110,7 +135,7 @@ class BookInstance(models.Model):
         """
         String representation for BookInstance Model object.
         """
-        return f'{ self.id } ({ self.book.title})'
+        return f'{ self.book.title} ({ self.id })'
 
 
 class Author(models.Model):
@@ -148,25 +173,6 @@ class Author(models.Model):
         String representation of Author Model object.
         """
         return f'{ self.last_name }, { self.first_name }'
-
-
-class Language(models.Model):
-    """
-    Model for content Language (Arabic, English, French, Spanish, etc.).
-    """
-    name = models.CharField(
-        max_length=200,
-        help_text="""
-            Enter the content's natural language (Arabic, English, 
-            French, Spanish, etc.).
-        """
-        )
-    
-    def __str__(self):
-        """
-        String representation of Language Model object.
-        """
-        return self.name
 
 
     
