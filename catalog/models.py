@@ -139,6 +139,8 @@ class BookInstance(models.Model):
     
     def get_author(self):
         return self.book.author
+    
+    get_author.short_description = 'Author'
 
 
 class Author(models.Model):
