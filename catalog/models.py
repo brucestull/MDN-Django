@@ -102,7 +102,7 @@ class BookInstance(models.Model):
         """
         String representation for BookInstance Model object.
         """
-        return f'{ self.id } ({ self.book.title})'
+        return f'{ self.status } : { self.id } ({ self.book.title})'
 
 
 class Author(models.Model):

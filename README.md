@@ -77,4 +77,6 @@
 * New concepts:
     * [ManyToManyField](https://docs.djangoproject.com/en/4.0/topics/db/examples/many_to_many/)
 
+### Django Tutorial Part 4: Django admin site
+* [MDN Part 4](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Admin_site)
 
