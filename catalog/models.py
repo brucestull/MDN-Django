@@ -58,6 +58,11 @@ class Book(models.Model):
         Returns the URL to access a particular BookInstance.
         """
         return reverse('book-detail', args=[str(self.id)])
+    
+    def display_genre(self):
+        return ', '.join(genre.name for genre in self.genre.all()[:4])
+    
+    display_genre.short_description = 'Genre'
 
 
 class BookInstance(models.Model):
@@ -102,7 +107,7 @@ class BookInstance(models.Model):
         """
         String representation for BookInstance Model object.
         """
-        return f'{ self.status } : { self.id } ({ self.book.title})'
+        return f'{ self.id } ({ self.book.title})'
 
 
 class Author(models.Model):
@@ -121,7 +126,7 @@ class Author(models.Model):
         blank=True
     )
     date_of_death = models.DateField(
-        'Died',
+        'Deceased',
         null=True,
         blank=True
     )
