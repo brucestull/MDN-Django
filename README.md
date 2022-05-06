@@ -88,4 +88,8 @@
         * [TabularInline](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#django.contrib.admin.TabularInline)
     * [@admin.register(Model)](https://docs.djangoproject.com/en/4.0/ref/contrib/admin/#the-register-decorator)
 
+### Django Tutorial Part 5: Creating our home page
+* [MDN Part 5](https://github.com/brucestull/MDN-Django/issues/21)
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 
+* New concepts:
