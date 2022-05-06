@@ -63,7 +63,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
     # Specify which fields to display in BookInstance List View.
     list_display = ('book', 'get_author', 'language', 'get_genre', 'status', 'due_back')
     # Specify which fields to use for filtering in BookInstance List View.
-    list_filter = ('status', 'due_back', 'language', 'imprint')
+    list_filter = ('book', 'status', 'due_back', 'language', 'imprint')
 
     # Detail-Edit View:
     # Specify display, grouping, and labeling of fields in Detail-Edit View.
