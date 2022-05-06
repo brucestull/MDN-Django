@@ -142,6 +142,11 @@ class BookInstance(models.Model):
     
     get_author.short_description = 'Author'
 
+    def get_genre(self):
+        return self.book.genre_list()
+
+    get_genre.short_description = 'Genre'
+
 
 class Author(models.Model):
     """
