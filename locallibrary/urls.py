@@ -22,12 +22,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name="home.html"), name='home'),
+    path('', RedirectView.as_view(url='catalog', permanent=True)),
+    path('home/', TemplateView.as_view(template_name="home.html"), name='home'),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('admin/', admin.site.urls),
     path('users/', include('users.urls')),
     path('users/', include('django.contrib.auth.urls')),
     path('catalog/', include('catalog.urls')),
-    # This line takes 'katalog' route and add 'catalog' to the end. Don't think we need tha since we already have '' mapped.
-    # path('katalog/', RedirectView.as_view(url='catalog', permanent=True)),
+    # This line takes '' route and add 'catalog' to the end. Don't think we need tha since we already have '' mapped.
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

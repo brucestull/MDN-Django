@@ -10,6 +10,7 @@
 * Server start: `python manage.py runserver 8060`
 * Routes:
     * http://localhost:8060/
+    * http://localhost:8060/home/
     * http://localhost:8060/admin/
     * http://localhost:8060/catalog/
 * Production routes:
@@ -93,3 +94,6 @@
 * https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 
 * New concepts:
+    * [APP_DIRS](https://docs.djangoproject.com/en/4.0/topics/templates/#configuration)
+    * Can use `catalog.views.index` for indeas on how to process user input for searches.
+

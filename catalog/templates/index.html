@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Local Library - Home{% endblock %}
+
+{% block content %}
+  <h1>Local Library Home</h1>
+  <p>Welcome to Local Library</p>
+  <h2>Dynamic content</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+    <li><strong>Genres:</strong> {{ num_genre }}</li>
+    <li><strong>Titles with 'the':</strong> {{ the_titles }}</li>
+    <li><strong>Titles with 'book':</strong> {{ book_titles }}</li>
+    <li><strong>Titles with 'my':</strong> {{ my_titles }}</li>
+    <li><strong>Books in 'Python':</strong> {{ num_python }}</li>
+    <li><strong>Books in 'Arabic':</strong> {{ num_arabic }}</li>
+  </ul>
+  
+  <p><strong>Available books with 'book' in title:</strong> {{ num_instances_available_book }}:</p>
+  <ul>
+    {% for book_instance in instances_available_book %}
+    <li>{{ book_instance.book.title }} ({{ book_instance.id }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
