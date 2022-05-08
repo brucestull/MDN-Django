@@ -88,3 +88,15 @@
 * https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
 
 * New concepts:
+    * [APP_DIRS](https://docs.djangoproject.com/en/4.0/topics/templates/#configuration)
+    * Can use `catalog.views.index` for indeas on how to process user input for searches.
+    * Git checkout commit and create branch:
+        * `git branch before-index-page 480a32c059c5e843e59d714cb571dfd69ca559c2`
+    * Git force local branch to match remote:
+        * `git fetch origin`
+        * `git reset --hard origin/branch-name`
+    * Reset Heroku repo:
+        * `heroku plugins:install heroku-repo`
+        * `heroku repo:reset --app appname`
+    * Push non-main branch:
+        * `git push heroku testbranch:main`
