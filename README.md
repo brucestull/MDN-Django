@@ -11,10 +11,7 @@
 * Routes:
     * http://localhost:8060/
     * http://localhost:8060/admin/
-    * http://localhost:8060/catalog/
 * Production routes:
-    * https://dezzis-books.herokuapp.com/
-    * https://git.heroku.com/dezzis-books.git
 
 
 ### Project deployed to Heroku:
@@ -25,8 +22,6 @@
 
 1. `git remote -v`
     ```
-    heroku  https://git.heroku.com/bunbuns-books.git (fetch)
-    heroku  https://git.heroku.com/bunbuns-books.git (push)
     origin  https://github.com/brucestull/MDN-Django.git (fetch)
     origin  https://github.com/brucestull/MDN-Django.git (push)
     ```
