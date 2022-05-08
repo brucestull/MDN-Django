@@ -13,8 +13,8 @@
     * http://localhost:8060/admin/
     * http://localhost:8060/catalog/
 * Production routes:
-    * https://bunbuns-books.herokuapp.com/
-    * https://git.heroku.com/bunbuns-books.git
+    * https://dezzis-books.herokuapp.com/
+    * https://git.heroku.com/dezzis-books.git
 
 
 ### Project deployed to Heroku:

@@ -1,4 +1,4 @@
 from locallibrary.settings.common import *
 
 
-DEBUG = False
+DEBUG = True
