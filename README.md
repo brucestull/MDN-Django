@@ -1,5 +1,4 @@
-## Django Library Application
-
+## Dezzi's Depot Library
 ### Resources:
 * [Django Web Framework (Python)](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 * https://github.com/brucestull/MDN-Django
@@ -11,14 +10,18 @@
 * Routes:
     * http://localhost:8060/
     * http://localhost:8060/admin/
+    * http://localhost:8060/catalog/
+    * http://localhost:8060/catalog/the-word/
 * Production routes:
+    * https://dezzis-depot.herokuapp.com/
+    * https://git.heroku.com/dezzis-depot.git
 
 
 ### Project deployed to Heroku:
 
 1. `heroku login`
 
-1. `heroku create bunbuns-books`
+1. `heroku create dezzis-depot`
 
 1. `git remote -v`
     ```
@@ -100,3 +103,43 @@
         * `heroku repo:reset --app appname`
     * Push non-main branch:
         * `git push heroku testbranch:main`
+
+### Django Tutorial Part 5: Creating our home page (REDO)
+* [MDN Part 5](https://github.com/brucestull/MDN-Django/issues/23)
+* https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page
+
+
+* New concepts:
+    * 
+
+#### Templates example:
+* `<a href="{% url 'catalog:the-word' %}">The Word</a>`
+* `common.py`:
+    ```
+    TEMPLATES = [
+        {
+            ...
+            'DIRS': [ BASE_DIR / 'templates'],
+            'APP_DIRS': True,
+            ...
+        },
+    ]
+    ```
+* Template location:
+`BASE_DIR\templates\catalog\the_word.html`
+* View:
+    ```
+    def the_word(request):
+        context = {
+            'the_word': 'potatoes'
+        }
+        return render(request, 'catalog/the_word.html', context=context)
+    ```
+* URL:
+    ```
+        ...
+        path('the-word/', views.the_word, name='the-word'),
+        ...
+    ```
+
+
