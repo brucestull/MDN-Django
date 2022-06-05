@@ -7,7 +7,9 @@
     <body>
         <nav>
             <a href="/admin" target="_blank">Django Admin</a><br>
-            <a href="https://github.com/brucestull/MDN-Django/projects/2" target="_blank">Project Page</a><br>
+            <a href="https://github.com/brucestull/MDN-Django" target="_blank">Project repostory</a>
+            <a href="https://github.com/brucestull/MDN-Django/projects/2" target="_blank">Project Board</a><br>
+            <a href="{% url 'catalog:the-word' %}">The Word</a>
         </nav>
         <main>
             {% block content %}

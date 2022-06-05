@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <a href="{% url 'home' %}">Dezzi's Depot - Home</a>
+    <h1>Dezzi's Depot - Index</h1>
+    <ul>
+        <li><b>Number of Titles: </b>{{ num_books }}</li>
+        <li><b>Number of Books: </b>{{ num_instances }}</li>
+        <li><b>Number of Books in Arabic: </b>{{ num_arabic }}</li>
+        <li><b>Number of Books in English: </b>{{ num_english }}</li>
+        <li><b>Current Number of Available Books: </b>{{ num_instances_available }}</li>
+        <li><b>Number of Authors: </b>{{ num_authors }}</li>
+    </ul>
+{% endblock%}

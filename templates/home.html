@@ -3,6 +3,7 @@
 {% block title %}Dezzi's Depot - Home{% endblock %}
 
 {% block content %}
+    <a href="{% url 'catalog:index' %}">Catalog Index</a><br>
     {% if user.is_authenticated %}
         Welcome, {{ user.username | capfirst }}:<br>
         <a href="{% url 'logout' %}">Log Out</a><br>
