@@ -12,9 +12,13 @@
     * http://localhost:8060/admin/
     * http://localhost:8060/catalog/
     * http://localhost:8060/catalog/the-word/
+
 * Production routes:
     * https://dezzis-depot.herokuapp.com/
     * https://git.heroku.com/dezzis-depot.git
+    
+* Dashboard:
+    * https://dashboard.heroku.com/apps
 
 
 ### Project deployed to Heroku:

@@ -15,12 +15,12 @@ def index(request):
     # print('dir(request): ', dir(request))
     # print('dir(request.GET): ', dir(request.GET))
 
-    # Some counts of catagories:
     num_books = Book.objects.count()
     print('num_books: ', num_books)
     num_instances = BookInstance.objects.all().count()
     print('num_instances: ', num_instances)
-
+    
+    # Some counts of catagories:-
     num_arabic = BookInstance.objects.filter(language__name__iexact='arabic').count()
     print('num_arabic: ', num_arabic)
     num_english = BookInstance.objects.filter(language__name__iexact='english').count()
